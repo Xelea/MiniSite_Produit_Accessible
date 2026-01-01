@@ -1,0 +1,161 @@
+:root {
+    --color-li-hover: #b60f18;
+    --color-button-hover: #520206;
+    --font-color: black;
+    --font-color-secondary: white;
+    --background: #FAF9F6;
+    --footer-background: #1a1a1a;
+    --line-color: black;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--font-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+nav[aria-label="navigation"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2rem solid var(--line-color);
+}
+
+nav[aria-label="navigation"] img {
+    width: 3.5rem;
+    height: auto;
+    margin: 0.6rem;
+}
+
+nav[aria-label="navigation"] ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+
+nav[aria-label="navigation"] ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--font-color);
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+nav ul li a:hover, nav ul li a[aria-current="page"], nav ul li a:focus {
+    text-decoration: none;
+    text-shadow: 0.5px 0 0 var(--color-li-hover), -0.5px 0 0 var(--color-li-hover);
+    color: var(--color-li-hover);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#hero_banner {
+    background-image: url('../assets/images/arceus.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    color: var(--font-color-secondary);
+    padding: 5rem;
+    text-align: center;
+}
+
+#hero_banner h1{
+    font-size: 2rem;
+    margin: 1rem 0 2rem 0;
+}
+
+#hero_banner p{
+    font-size: 1.5rem;
+    margin: 1rem 0 3.5rem 0;
+}
+
+#banner_btn {
+    text-decoration: none;
+    background-color: var(--color-li-hover);
+    color: var(--font-color-secondary);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#banner_btn:hover, #banner_btn:focus {
+    background-color: var(--color-button-hover);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#banner_btn:active {
+    transform: scale(0.98);
+}
+
+#introduction {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#introduction h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#introduction p {
+    font-size: 1.2rem;
+    margin: 0 auto 1.5rem auto;
+    max-width: 90rem;
+    line-height: 1.2;
+}
+
+footer {
+    border-top: 0.2rem solid var(--line-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.9rem;
+    margin-top: auto;
+    background-color: var(--footer-background); 
+    color: var(--font-color-secondary);
+}
+
+nav[aria-label="footer"] ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+    gap: 2rem;
+    font-size: 1.25rem;
+}
+
+nav[aria-label="footer"] a {
+    color: var(--font-color-secondary);
+    opacity: 0.9;
+}
+
+nav[aria-label="footer"] a:hover {
+    color: var(--color-li-hover);
+}
+
+footer p {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+    
