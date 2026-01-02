@@ -6,6 +6,7 @@
     --background: #FAF9F6;
     --footer-background: #1a1a1a;
     --line-color: black;
+    --outline: #ffcb05;
     --font-family: 'Arial', sans-serif;
 }
 
@@ -27,7 +28,7 @@ nav[aria-label="navigation"] {
     border-bottom: 0.2rem solid var(--line-color);
 }
 
-nav[aria-label="navigation"] img {
+.logo {
     width: 3.5rem;
     height: auto;
     margin: 0.6rem;
@@ -62,7 +63,7 @@ main {
     flex-direction: column;
 }
 
-#hero_banner {
+#hero-banner {
     background-image: url('../assets/images/arceus.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,17 +73,17 @@ main {
     text-align: center;
 }
 
-#hero_banner h1{
+#hero-banner h1{
     font-size: 2rem;
     margin: 1rem 0 2rem 0;
 }
 
-#hero_banner p{
+#hero-banner p{
     font-size: 1.5rem;
     margin: 1rem 0 3.5rem 0;
 }
 
-#banner_btn {
+#banner-btn {
     text-decoration: none;
     background-color: var(--color-li-hover);
     color: var(--font-color-secondary);
@@ -94,13 +95,15 @@ main {
     transition: background-color 0.3s;
 }
 
-#banner_btn:hover, #banner_btn:focus {
+#banner-btn:hover, #banner-btn:focus {
     background-color: var(--color-button-hover);
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    outline: 3px solid var(--outline); 
+    outline-offset: 2px;
 }
 
-#banner_btn:active {
+#banner-btn:active {
     transform: scale(0.98);
 }
 
@@ -122,6 +125,215 @@ main {
     margin: 0 auto 1.5rem auto;
     max-width: 90rem;
     line-height: 1.2;
+}
+
+#produit-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--font-color-secondary);
+    background-color: var(--footer-background);
+    padding: 0.5rem 0;
+}
+
+.carrousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--font-color-secondary);
+    margin-top: 0;
+    border-top: 0.2rem solid var(--line-color);
+}
+
+#carrousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+#carrousel-pause-btn {
+    margin-bottom: 1.1rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: var(--color-li-hover);
+    border: 0.01rem solid var(--line-color);
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+    color: var(--font-color-secondary);
+}
+
+#carrousel-pause-btn:hover, #carrousel-pause-btn:focus {
+    background-color: var(--color-button-hover);
+    outline: 0.23rem solid var(--outline); 
+    outline-offset: 0.1rem;
+}
+
+#carrousel-slides-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 30rem;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.nav-btn {
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    height: 30rem;
+    width: 3rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-btn:hover, .nav-btn:focus{
+    background: rgba(0, 0, 0, 0.15);
+    color: var(--color-li-hover);
+}
+
+.carrousel-indicators {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.indicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 5rem;
+    border: 0.01rem solid #000;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    padding: 0;
+    margin: 0 0.5rem;
+}
+
+.indicator[aria-selected="true"] {
+    background-color: var(--color-li-hover);
+    transform: scale(1.2);
+}
+
+.indicator:hover, .indicator:focus {
+    background-color: var(--color-li-hover);
+    outline: 0.23rem solid var(--outline); 
+    outline-offset: 0.1rem;
+}
+
+#video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0 0.5rem 0;
+}
+
+#video h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+#video video {
+    width: 50rem;
+    max-width: 115vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+}
+
+#transcription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 2rem 2rem 2rem;
+}
+
+#transcription h3 {
+    font-size: 1.8rem;
+}
+
+#transcription p {
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.2rem;
+}
+
+.download-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.download-btn {
+    text-decoration: none;
+    margin-bottom: 1.1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: var(--color-li-hover);
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+    color: var(--font-color-secondary);
+}
+
+.download-btn:hover {
+    background-color: var(--color-button-hover);
+    outline: 0.23rem solid var(--outline); 
+    outline-offset: 0.1rem;
+}
+
+#definitions {
+    background-color: var(--background);
+    border-top: 0.2rem solid var(--line-color);
+}
+
+#definitions h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+}
+
+#definitions dl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+#definitions dt {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+#definitions dd {
+    font-size: 1.2rem;
+    line-height: 3rem;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--font-color);
+    font-style: italic;
 }
 
 footer {
