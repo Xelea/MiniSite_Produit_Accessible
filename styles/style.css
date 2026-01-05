@@ -4,6 +4,7 @@
     --font-color: black;
     --font-color-secondary: white;
     --background: #FAF9F6;
+    --background-secondary: white;
     --footer-background: #1a1a1a;
     --line-color: black;
     --outline: #ffcb05;
@@ -64,7 +65,7 @@ main {
 }
 
 #hero-banner {
-    background-image: url('../assets/images/arceus.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/images/arceusBanner.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center right;
@@ -140,7 +141,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--font-color-secondary);
+    background-color: var(--background-secondary);
     margin-top: 0;
     border-top: 0.2rem solid var(--line-color);
 }
@@ -334,6 +335,219 @@ main {
     margin-bottom: 1.5rem;
     color: var(--font-color);
     font-style: italic;
+}
+
+#contact-title {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#contact-form {
+    max-width: 50rem;
+    margin: 0 auto 4rem auto;
+    padding: 2rem;
+    background: var(--font-color-secondary);
+    border-radius: 0.8rem;
+    box-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-bottom: 0.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form textarea {
+    padding: 0.8rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: 0.125rem solid var(--outline);
+    border-color: transparent;
+}
+
+.form-help {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.error-message {
+    color: var(--color-li-hover);
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    min-height: 1.2rem;
+}
+
+#radio-group + .error-message {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#submit-button {
+    width: 50rem;
+    padding: 1rem;
+    background-color: var(--color-li-hover);
+    color: var(--font-color-secondary);
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#submit-button:hover {
+    background-color: var(--color-button-hover);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97rem;
+    height: 45rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal-content {
+    background: var(--font-color-secondary);
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    max-width: 28rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0.6rem 1.8rem rgba(0,0,0,0.3);
+    font-size: 1.2rem;
+    
+}
+
+#modal-title {
+    color: var(--color-button-hover);
+    margin-bottom: 1rem;
+}
+
+#modal-close-button {
+    margin-top: 1.3rem;
+    padding: 0.6rem 2rem;
+    background: var(--color-li-hover);
+    color: var(--font-color-secondary);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#modal-close-button:hover, #modal-close-button:focus {
+    background: var(--color-button-hover);
+    outline: 3px solid var(--outline);
+    outline-offset: 2px;
+}
+
+#contact-form fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#contact-form legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+#radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#a-propos h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--font-color-secondary);
+    background-color: var(--footer-background);
+    padding: 0.5rem 0;
+}
+
+#a-propos section {
+    max-width: 80rem;
+    margin: 1rem auto 4rem auto;
+    padding: 0 2rem;
+    line-height: 1.8;
+}
+
+#a-propos h2 {
+    color: var(--color-li-hover);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 0.1rem solid var(--line-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+#a-propos p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+#visuel-marque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    background-color: var(--background-secondary);
+    border-radius: 5rem;
+    box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.3);
+}
+
+#visuel-marque img {
+    width: 50rem;
+    height: auto;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
+    border: 0.2rem solid var(--line-color);
+    background-color: var(--background-secondary);
 }
 
 footer {

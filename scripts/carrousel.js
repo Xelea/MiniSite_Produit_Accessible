@@ -1,11 +1,11 @@
 const pokemonsImages = [
-    {name: "Arceus", src: "assets/carrousel/arceus.jpg"},
-    {name: "Dialga", src: "assets/carrousel/dialga.jpg"},
-    {name: "Palkia", src: "assets/carrousel/palkia.jpg"},
-    {name: "Giratina", src: "assets/carrousel/giratina.jpg"},
-    {name: "Crehelf", src: "assets/carrousel/crehelf.jpg"},
-    {name: "Crefollet", src: "assets/carrousel/crefollet.jpg"},
-    {name: "Crefadet", src: "assets/carrousel/crefadet.jpg"},
+    {name: "Arceus", src: "assets/carrousel/arceus.webp"},
+    {name: "Dialga", src: "assets/carrousel/dialga.webp"},
+    {name: "Palkia", src: "assets/carrousel/palkia.webp"},
+    {name: "Giratina", src: "assets/carrousel/giratina.webp"},
+    {name: "Crehelf", src: "assets/carrousel/crehelf.webp"},
+    {name: "Crefollet", src: "assets/carrousel/crefollet.webp"},
+    {name: "Crefadet", src: "assets/carrousel/crefadet.webp"},
 ];
 
 const slidesContainer = document.getElementById('carrousel-slides-container');
