@@ -4,7 +4,7 @@ const closeModalBtn = document.getElementById('modal-close-button');
 const radioGroup = form['plage-horaire'];
 const radioError = document.querySelector('#radio-group + .error-message');
 
-const regexText = /^[a-zA-ZÀ-ÿ\s\-]+$/;
+const regexText = /^[a-zA-ZÀ-ÿ\s\'-]+$/;
 const regexDate = /^\d{2}\/\d{2}\/\d{4}$/;
 const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const regexTelephone = /^(06|07)\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2}$/;
